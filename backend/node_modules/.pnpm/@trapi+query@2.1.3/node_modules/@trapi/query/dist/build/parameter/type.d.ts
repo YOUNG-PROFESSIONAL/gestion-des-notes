@@ -1,0 +1,4 @@
+import { FieldsBuildInput, FiltersBuildInput, PaginationBuildInput, RelationsBuildInput, SortBuildInput } from '../../parameter';
+import { Parameter, URLParameter } from '../../constants';
+export declare type BuildParameterInput<T extends `${Parameter}` | `${URLParameter}`, R extends Record<string, any> = Record<string, any>> = T extends `${Parameter.FIELDS}` | `${URLParameter.FIELDS}` ? FieldsBuildInput<R> : T extends `${Parameter.FILTERS}` | `${URLParameter.FILTERS}` ? FiltersBuildInput<R> : T extends `${Parameter.RELATIONS}` | `${URLParameter.RELATIONS}` ? RelationsBuildInput<R> : T extends `${Parameter.PAGINATION}` | `${URLParameter.PAGINATION}` ? PaginationBuildInput<R> : T extends `${Parameter.SORT}` | `${URLParameter.SORT}` ? SortBuildInput<R> : never;
+//# sourceMappingURL=type.d.ts.map

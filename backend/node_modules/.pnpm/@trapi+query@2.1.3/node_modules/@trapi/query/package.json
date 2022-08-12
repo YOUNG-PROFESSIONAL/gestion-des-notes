@@ -1,0 +1,51 @@
+{
+    "name": "@trapi/query",
+    "version": "2.1.3",
+    "description": "A tiny library which provides utility types/functions for request and response query handling.",
+    "main": "./dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "rm -rf ./dist && tsc -p tsconfig.build.json",
+        "test": "cross-env NODE_ENV=test jest --config ./test/jest.config.js",
+        "test:coverage": "cross-env NODE_ENV=test jest --config ./test/jest.config.js --coverage",
+        "prepublishOnly": "npm run build"
+    },
+    "author": {
+        "name": "Peter Placzek",
+        "email": "contact@tada5hi.net",
+        "url": "https://github.com/tada5hi"
+    },
+    "license": "MIT",
+    "keywords": [
+        "query",
+        "json",
+        "json-api",
+        "api",
+        "rest",
+        "api-utils",
+        "include",
+        "pagination",
+        "sort",
+        "fields",
+        "relations",
+        "typescript"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tada5hi/trapi.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Tada5hi/trapi/issues"
+    },
+    "homepage": "https://github.com/Tada5hi/trapi#readme",
+    "dependencies": {
+        "minimatch": "^5.0.1"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "12fc7cc4be787779fee81bedb9a4cff0e2f5055d"
+}

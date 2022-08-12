@@ -1,0 +1,117 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "backend",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC"
+    },
+    "prefix": "/home/jckristin/Developments/tp-gestion-notes/backend"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/jckristin/Developments/tp-gestion-notes/backend/~path/to/.pnpm-store/v3",
+    "virtualStoreDir": "/home/jckristin/Developments/tp-gestion-notes/backend/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/home/jckristin/Developments/tp-gestion-notes/backend",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/ts-node-dev"
+  },
+  "5 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/typescript"
+  },
+  "6 error pnpm": {
+    "code": "ERR_PNPM_META_FETCH_FAIL",
+    "attempts": 1,
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "pnpm",
+      "type": "tag"
+    },
+    "err": {
+      "name": "Error",
+      "message": "GET https://registry.npmjs.org/pnpm: request to https://registry.npmjs.org/pnpm failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org",
+      "code": "ERR_PNPM_META_FETCH_FAIL",
+      "stack": "Error: GET https://registry.npmjs.org/pnpm: request to https://registry.npmjs.org/pnpm failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org\n    at RetryOperation._fn (/snapshot/dist/pnpm.cjs)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  },
+  "7 debug pnpm": "Using cached meta from /home/jckristin/.cache/pnpm/metadata/registry.npmjs.org/pnpm.json",
+  "8 debug pnpm:update-check": {
+    "currentVersion": "7.1.7",
+    "latestVersion": "7.1.7"
+  },
+  "9 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/ts-node-dev"
+  },
+  "10 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/typescript"
+  },
+  "11 error pnpm": {
+    "code": "ERR_PNPM_META_FETCH_FAIL",
+    "attempts": 1,
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "ts-node-dev",
+      "type": "tag"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/ts-node-dev: request to https://registry.npmjs.org/ts-node-dev failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org",
+      "code": "ERR_PNPM_META_FETCH_FAIL",
+      "stack": "pnpm: GET https://registry.npmjs.org/ts-node-dev: request to https://registry.npmjs.org/ts-node-dev failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org\n    at RetryOperation._fn (/snapshot/dist/pnpm.cjs)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  }
+}

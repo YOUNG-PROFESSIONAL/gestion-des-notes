@@ -1,0 +1,9 @@
+declare type Tsconfig = {
+    compilerOptions?: {
+        outDir?: string;
+        [key: string]: any;
+    };
+    [key: string]: any;
+};
+export declare function readTsConfig(directory?: string): Promise<Tsconfig>;
+export {};
