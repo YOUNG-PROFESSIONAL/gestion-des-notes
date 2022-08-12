@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>90</y>
+      <w>570</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>STUDENT
+-
+- stuNum: string
+- stuFirstname: string
+- stuLastname: string
+- stuLevel: LEVEL
+- stuParcours: PARCOURS
+-
++ listStudent(key:string,stuLevel: LEVEL,stuParcours: PARCOURS):STUDENT []
++ addStudent(student: STUDENT): Boolean
++ ModStudent(student: STUDENT): Boolean
++ getStudent(key:string): STUDENT
++ deleteStudent(stuNum: string): Boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
