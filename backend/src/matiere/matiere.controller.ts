@@ -19,7 +19,8 @@ public static async updateMatiere(req: Request, res: Response, next: NextFunctio
     res.status(200).json(data);
 }
 public static async suppMatiere(req: Request, res: Response, next: NextFunction){
-    const data = await MatiereService.suppMatiere(req.params.id);
+    const obj:string = JSON.parse(req.params.id);
+    const data = await MatiereService.suppMatiere(obj);
     res.status(200).json(data);
 }
 }

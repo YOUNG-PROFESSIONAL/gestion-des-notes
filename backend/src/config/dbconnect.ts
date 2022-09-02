@@ -5,11 +5,11 @@ import { Notes } from '../notes/notes.model';
 
 export const dataSource = new DataSource({
     type: "mariadb",
-    host: "localhost",
+    host: "127.0.0.1",
     port: 3306,
     username: "io",
     password: "00001111",
-    database: "gsc",
+    database: "sco",
     synchronize: true,
     //logging: true,
     entities: [Student,Matiere,Notes],

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f308c3c-277e-451c-b57e-545a2c512931" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/fastRequestCollection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.pnpm/@types+cors@2.8.12/node_modules/@types/cors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.pnpm/@types+cors@2.8.12/node_modules/@types/cors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.pnpm/@types+cors@2.8.12/node_modules/@types/cors/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.pnpm/@types+cors@2.8.12/node_modules/@types/cors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/cors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~path/to/.pnpm-store/v3/files/8b/e05f9d41ffc4661f7a71a04539ed228926156382b5c0bdb6cb34bcc7ff18052da1e39e22c29b6bbe69481bddc57125a0473dbb47328f0bef174cb81647c79b-exec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~path/to/.pnpm-store/v3/files/b8/271efc857d24465dc47ba0feece72a96ea0374571ee37bbb387dc614812edbb6456835b58e68947c7236385168ddc1788b602e514234d030a75b00f5b516ba-exec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~path/to/.pnpm-store/v3/files/be/dfa40e1abf3366b26deac4b4970837f8715f2d4f93ee7d836155fd941c79e693c82b42b9c8cbd90ec55e5163b569f89f5e4a0abd4d13694d345869d2511387-index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~path/to/.pnpm-store/v3/files/de/e194b5181eae944ad85bcc32c14aa8dc6890a219a987080632c7c58fa31750a9c5d9a968e0b2701df609821b4e4c14ecdd7ac2c30498f567ca3ccab966f49b-exec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/converter-gson-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/gson-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/jackson-databind-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-core-11.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-core-11.0-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-core-11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-swing-11.0-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-swing-11.0-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/miglayout-swing-11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/lib/retrofit-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/resources/static/icon/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/resources/static/icon/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/config/HttpConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/config/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/BodiesPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/bulletin/Bulletin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/dashboard/DashboardTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/etudiant/Etudiant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/etudiant/EtudiantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/etudiant/EtudiantUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/etudiant/NIVEAU.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/matieres/Matieres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/bodies/contents/notes/Notes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/footers/FootersJPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/headers/HeadersJPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/headers/connexion/Deconnexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/headers/logo/Logo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/ui/headers/title/Title.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.modules.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.modules.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm/node_modules/.bin/uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm/node_modules/uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/dbconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/dbconnect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/student/student.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/student/student.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/student/student.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/student/student.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/Gsc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/views/StudentView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main/java/tp/eni/gsc/views/VGsc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/main/java/tp/eni/gsc/Gsc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/main/java/tp/eni/gsc/views/StudentView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/main/java/tp/eni/gsc/views/StudentView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/main/java/tp/eni/gsc/views/VGsc$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/target/classes/main/java/tp/eni/gsc/views/VGsc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-gestion-notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../tp-gestion-notes.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2E6gSr0BChfYRZGN4DMk4dj6ukI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="/media/jckristin/Intelloctet/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/run.sh" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExpressJS" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/run.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f308c3c-277e-451c-b57e-545a2c512931" name="Changes" comment="" />
+      <created>1661921452205</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661921452205</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,9 +1,14 @@
+import { LEVEL } from './level.enum';
 import { Request,Response,NextFunction } from 'express';
 import StudentService from './student.service';
+import NotesService from '../../notes/notes.service';
 
 class StudentController{
-    public static async getAllStudents(req: Request, res: Response, next: NextFunction){
-            const data = await StudentService.getListStudents();
+    public static async getAllStudents(req: Request, res: Response, next: NextFunction){;
+        let niv:LEVEL =  JSON.parse(req.params.niv);
+        let mc:string = "";
+        if(req.params.mc != undefined) mc = req.params.mc;
+            const data = await StudentService.getListStudents(mc,niv);
             res.status(200).json(data);
     }
     public static async getStudent(req: Request, res: Response, next: NextFunction){
@@ -19,7 +24,8 @@ class StudentController{
         res.status(200).json(data);
     }
     public static async deleteStudent(req: Request, res: Response, next: NextFunction){
-        const data = await StudentService.deleteStudent(req.params.id);
+        let obj:string = JSON.parse(req.params.id);
+        const data = await StudentService.deleteStudent(obj);
         res.status(200).json(data);
     }
 }

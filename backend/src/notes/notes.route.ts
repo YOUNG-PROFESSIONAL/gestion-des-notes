@@ -3,12 +3,16 @@ import { Application } from "express";
 
 export class RoutesNotes {
     public routes(app: Application): void{
-        app.route("/notes")
+       
+       /* app.route("/notes/:niv")
+        .get(NotesController.getAllNotes)*/
+        app.route("/notes/:niv/:matId")
         .get(NotesController.getAllNotes)
-        .post(NotesController.addNotes)
+
+        app.route("/note")
         .put(NotesController.updateNotes);
 
-        app.route("/notes/:id")
+        app.route("/note/:niv")
         .get(NotesController.getNotes)
         .delete(NotesController.suppNotes);
     }

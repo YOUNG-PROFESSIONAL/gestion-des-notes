@@ -1,4 +1,5 @@
 export enum LEVEL{
+    Tous,
     L1,
     L2,
     L3,

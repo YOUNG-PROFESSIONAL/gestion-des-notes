@@ -3,8 +3,13 @@ import StudentController from "./student.controller";
 
 class RoutesStudent{
     public routes(app: Application):void {
+
+        app.route("/students/:niv")
+        .get(StudentController.getAllStudents);
+        app.route("/students/:niv/:mc")
+        .get(StudentController.getAllStudents);
+
         app.route("/student")
-        .get(StudentController.getAllStudents)
         .post(StudentController.addStudent)
         .put(StudentController.updateStudent);
 

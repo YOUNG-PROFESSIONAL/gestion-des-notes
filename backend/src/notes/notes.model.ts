@@ -5,12 +5,19 @@ import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn, Unique 
 @Entity()
 @Unique(['noteStudent','noteMatiere'])
 export class Notes{
-    @PrimaryColumn()
+    @PrimaryColumn("uuid")
     noteId!: string;
     @Column({ type: 'double'})
     note!: number;
-    @ManyToOne(() => Student, (student) => student.studentNotes,{cascade:['insert']})
+    @ManyToOne(() => Student, (student) => student.studentNotes)
     noteStudent!: Student;
-    @ManyToOne(() => Matiere, (matiere) => matiere.matiereNote,{cascade:['insert']})
+    @ManyToOne(() => Matiere, (matiere) => matiere.matiereNote)
     noteMatiere!: Matiere;
+
+   /* constructor(id: string,notes:number,student:Student,matiere:Matiere) {
+        this.noteId = id;
+        this.note = notes;
+        this.noteStudent = student;
+        this.noteMatiere = matiere;
+    }*/
 }
