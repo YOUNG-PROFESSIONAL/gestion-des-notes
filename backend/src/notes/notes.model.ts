@@ -9,6 +9,7 @@ export class Notes{
     noteId!: string;
     @Column({ type: 'double'})
     note!: number;
+
     @ManyToOne(() => Student, (student) => student.studentNotes)
     noteStudent!: Student;
     @ManyToOne(() => Matiere, (matiere) => matiere.matiereNote)

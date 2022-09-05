@@ -25,20 +25,10 @@ public class NotesService {
         }
         return list;
     }
-    public Notes getNotes(Notes notes){
-        return null;
-    }
-    public Notes addNotes(Notes notes) throws IOException {
-        Gson gson = new Gson();
-        String json = gson.toJson(notes);
-        Message elements = httpConnection.httpPost("notes",json);
-        System.out.println("Message : " + elements.message);
-        return null;
-    }
     public Notes updateNotes(Notes notes) throws IOException     {
         Gson gson = new Gson();
         String json = gson.toJson(notes);
-        Message elements = httpConnection.httpPut("notes",json);
+        Message elements = httpConnection.httpPut("note",json);
         System.out.println("Message : " + elements.message);
         return null;
     }

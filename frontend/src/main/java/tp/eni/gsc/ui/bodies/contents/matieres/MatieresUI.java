@@ -7,6 +7,7 @@ import main.java.tp.eni.gsc.ui.headers.title.Title;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,7 @@ public class MatieresUI extends JPanel{
     JTable table;
     JScrollPane scrollPane;
     DefaultTableModel tableModel;
-    MatieresService service;
+    MatieresService service = new MatieresService();
 
     /**************FORM*************/
     JLabel code, libelle,coef;
@@ -63,10 +64,13 @@ public class MatieresUI extends JPanel{
         table.getColumnModel().getColumn(1).setMaxWidth(200);
         table.getColumnModel().getColumn(2).setWidth(300);
         table.getColumnModel().getColumn(3).setMaxWidth(100);
-
+        /****** Center table cell *************/
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        table.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
+        /*************************************/
         // Hide table column four 04
         table.removeColumn(table.getColumnModel().getColumn(4));
-        service = new MatieresService();
         int i = 1;
         for (Matiere mat: service.getAllMatieres("",null)) {
             tableModel.addRow(new Object[]{

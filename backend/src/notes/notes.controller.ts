@@ -15,8 +15,6 @@ public static async getNotes(req: Request, res: Response, next: NextFunction){
 }
 
 public static async updateNotes(req: Request, res: Response, next: NextFunction){
-    console.log(req.body);
-    
     const data = await NotesService.updateNotes(req.body);
     res.status(200).json(data);
 }

@@ -7,7 +7,8 @@ export class ClassementController{
         res.status(200).json(data);
     }
     public static async getClassement(req: Request,res: Response, next: NextFunction){
-        const data = await ClassementService.getClassement(req.body);
+        const data = await ClassementService.getClassement(req.params.niv);
+        console.log(data);
         res.status(200).json(data);
     }
 }

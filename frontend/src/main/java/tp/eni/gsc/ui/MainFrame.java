@@ -1,8 +1,8 @@
 package main.java.tp.eni.gsc.ui;
 
 import main.java.tp.eni.gsc.ui.bodies.BodiesPanel;
-import main.java.tp.eni.gsc.ui.bodies.contents.bulletin.Bulletin;
-import main.java.tp.eni.gsc.ui.bodies.contents.dashboard.DashboardTable;
+import main.java.tp.eni.gsc.ui.bodies.contents.bulletin.BulletinUI;
+import main.java.tp.eni.gsc.ui.bodies.contents.dashboard.DashboardUI;
 import main.java.tp.eni.gsc.ui.bodies.contents.etudiant.EtudiantUI;
 import main.java.tp.eni.gsc.ui.bodies.contents.matieres.MatieresUI;
 import main.java.tp.eni.gsc.ui.bodies.contents.notes.NotesUI;
@@ -28,10 +28,10 @@ public class MainFrame extends JFrame {
     JButton btnNotes;
     JButton btnBulletin;
 
-    public MainFrame(){
+    public MainFrame() throws IOException {
         initUI();
     }
-    private void initUI(){
+    private void initUI() throws IOException {
         /********* ADD COMPONENTS ********/
         headersPanel = new HeadersJPanel();
         menuPanel = new JPanel();
@@ -41,7 +41,7 @@ public class MainFrame extends JFrame {
         /************Menu Panel***********/
         menuPanel();
         /********* Set Layout *********/
-        MigLayout migLayout = new MigLayout("fillx","0[]0","[][top][]");
+        MigLayout migLayout = new MigLayout("filly","0[]0","[][top][]");
         mainPanel.setLayout(migLayout);
         mainPanel.add(headersPanel,"span");
         mainPanel.add(menuPanel,"cell 0 1");
@@ -53,6 +53,7 @@ public class MainFrame extends JFrame {
         setSize(new Dimension(1920,1080));
         setBackground(new Color(0xFFFFFF));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        btnDashboard.setEnabled(false);
     }
     private  void createLayout(JComponent... args){
         GroupLayout groupLayout = new GroupLayout(getContentPane());
@@ -69,7 +70,7 @@ public class MainFrame extends JFrame {
         btnDashboard = new JButton("Tableau de bord");
         btnEtudiant = new JButton("Etudiants");
         btnMatieres = new JButton("Matieres");
-        btnNotes = new JButton("NotesUI");
+        btnNotes = new JButton("Notes");
         btnBulletin = new JButton("Bulletin");
         /************** sous - menu -------------------*/
 
@@ -91,29 +92,28 @@ public class MainFrame extends JFrame {
         btnDashboard.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                btnDashboard.setEnabled(false);
+                btnEtudiant.setEnabled(true);
+                btnMatieres.setEnabled(true);
+                btnNotes.setEnabled(true);
+                btnBulletin.setEnabled(true);
                 super.mouseClicked(e);
                 try {
-                    bodiesPanel.showForm(new DashboardTable());
+                    bodiesPanel.showForm(new DashboardUI());
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                super.mouseReleased(e);
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                super.mouseExited(e);
-
             }
         });
 
         btnEtudiant.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnDashboard.setEnabled(true);
+                btnEtudiant.setEnabled(false);
+                btnMatieres.setEnabled(true);
+                btnNotes.setEnabled(true);
+                btnBulletin.setEnabled(true);
                 try {
                     bodiesPanel.showForm(new EtudiantUI());
                 } catch (IOException ex) {
@@ -125,6 +125,11 @@ public class MainFrame extends JFrame {
         btnMatieres.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnDashboard.setEnabled(true);
+                btnEtudiant.setEnabled(true);
+                btnMatieres.setEnabled(false);
+                btnNotes.setEnabled(true);
+                btnBulletin.setEnabled(true);
                 try {
                     bodiesPanel.showForm(new MatieresUI());
                 } catch (IOException ex) {
@@ -136,6 +141,11 @@ public class MainFrame extends JFrame {
         btnNotes.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                btnDashboard.setEnabled(true);
+                btnEtudiant.setEnabled(true);
+                btnMatieres.setEnabled(true);
+                btnNotes.setEnabled(false);
+                btnBulletin.setEnabled(true);
                 super.mouseClicked(e);
                 try {
                     bodiesPanel.showForm(new NotesUI());
@@ -148,7 +158,16 @@ public class MainFrame extends JFrame {
         btnBulletin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                bodiesPanel.showForm(new Bulletin());
+                btnDashboard.setEnabled(true);
+                btnEtudiant.setEnabled(true);
+                btnMatieres.setEnabled(true);
+                btnNotes.setEnabled(true);
+                btnBulletin.setEnabled(false);
+                try {
+                    bodiesPanel.showForm(new BulletinUI());
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 

@@ -15,7 +15,6 @@ public class EtudiantService {
     private final HttpConnection httpConnection = new HttpConnection();
 
     public List<Etudiant> getAllStudent(String key, Integer niv) throws IOException {
-        System.out.println("------" + niv);
         List<Etudiant> list = new ArrayList<Etudiant>(){};
         JsonArray etudiants = httpConnection.httpGetAll("students",niv,key);
 

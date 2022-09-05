@@ -1,4 +1,4 @@
-import { Entity, Column, OneToMany } from "typeorm";
+import { Entity, Column, OneToMany, JoinColumn } from "typeorm";
 import { Notes } from "../../notes/notes.model";
 import { Person } from "../person.model";
 import { LEVEL } from "./level.enum";
@@ -9,7 +9,6 @@ export class Student extends Person{
         type: 'int'
         })
     studentLevel!: number;
-
     @OneToMany(() => Notes,(notes) => notes.note,{cascade:['insert','remove','update']})
     studentNotes!: Notes[];
    

@@ -1,36 +1,88 @@
 package main.java.tp.eni.gsc.ui.bodies.contents.bulletin;
 
-import net.miginfocom.swing.MigLayout;
+import main.java.tp.eni.gsc.ui.bodies.contents.etudiant.Etudiant;
+import main.java.tp.eni.gsc.ui.bodies.contents.notes.Notes;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
+import java.util.List;
 
-public class Bulletin extends JPanel{
-    JTable table;
-    JScrollPane scrollPane;
-    DefaultTableModel tableModel;
+public class Bulletin{
+    private Etudiant bStudent;
+    private List<Notes> bNotes;
+    private Double bNotePonderee;
+    private Double bAverage;
+    private Integer bCoefficient;
+    private String bObservation;
 
-    public Bulletin(){
-        initUI();
+    public  Bulletin(){}
+
+    public Bulletin(Etudiant bStudent, List<Notes> bNotes, Double bNotePonderee, Double bAverage, Integer bCoefficient, String bObservation) {
+        this.bStudent = bStudent;
+        this.bNotes = bNotes;
+        this.bNotePonderee = bNotePonderee;
+        this.bAverage = bAverage;
+        this.bCoefficient = bCoefficient;
+        this.bObservation = bObservation;
     }
-    private  void initUI(){
-        /********** Init component*********/
-        tableModel = new DefaultTableModel();
-        table = new JTable();
-        scrollPane = new JScrollPane();
-        /*************set Components values ************/
-        tableModel.setColumnIdentifiers(new Object[]{"Numero","Nom et Prénom","NIVEAU"});
-        table.setModel(tableModel);
-        /************* init components *********/
 
-        /********* set Components *********/
-        scrollPane.setViewportView(table);
-        setPreferredSize(new Dimension(1200,400));
-        /************* set Layout *************/
-        MigLayout layout = new MigLayout("fillx","[]","[][]");
-        setLayout(layout);
-        add(scrollPane,"span 1,w 1000!");
+    public Etudiant getbStudent() {
+        return bStudent;
+    }
 
+    public void setbStudent(Etudiant bStudent) {
+        this.bStudent = bStudent;
+    }
+
+    public List<Notes> getbNotes() {
+        return bNotes;
+    }
+
+    public void setbNotes(List<Notes> bNotes) {
+        this.bNotes = bNotes;
+    }
+
+    public Double getbNotePonderee() {
+        return bNotePonderee;
+    }
+
+    public void setbNotePonderee(Double bNotePonderee) {
+        this.bNotePonderee = bNotePonderee;
+    }
+
+    public Double getbAverage() {
+        return bAverage;
+    }
+
+    public void setbAverage(Double bAverage) {
+        this.bAverage = bAverage;
+    }
+
+    public Integer getbCoefficient() {
+        return bCoefficient;
+    }
+
+    public void setbCoefficient(Integer bCoefficient) {
+        this.bCoefficient = bCoefficient;
+    }
+
+    public String getbObservation() {
+        if(moyenne() >= 10.0) this.bObservation = "ADMIS";
+        else  if(moyenne()< 10.0 && moyenne() >= 7.5) this.bObservation = "REDOUBLANT";
+        else this.bObservation ="EXCLU";
+        return bObservation;
+    }
+
+    public void setbObservation(String bObservation) {
+        if(moyenne() >= 10.0) this.bObservation = "ADMIS";
+        else  if(moyenne()< 10.0 && moyenne() >= 7.5) this.bObservation = "REDOUBLANT";
+        else this.bObservation ="EXCLU";
+    }
+    public Double moyenne(){
+        Double moyens = 0.0;
+        Integer coef = 0;
+        for(Notes note : this.bNotes) {
+            moyens = moyens + note.getNote()*note.getNoteMatiere().getMatiereCoeff();
+            coef = coef + note.getNoteMatiere().getMatiereCoeff();
+        }
+        return moyens/coef;
     }
 }

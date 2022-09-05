@@ -25,6 +25,8 @@ public class HttpConnection {
         HttpURLConnection connection;
         if ((mc.isEmpty() || mc.isBlank()) && niv != null)
             connection = createConnection(urlHttp +"/"+ endpoint +"/" + niv , "GET");
+        else if ((!mc.isEmpty() || !mc.isBlank()) && niv == null)
+            connection = createConnection(urlHttp +"/"+ endpoint +"/" + mc , "GET");
         else if((mc.isEmpty() || mc.isBlank()) && niv == null)
             connection = createConnection(urlHttp +"/"+ endpoint , "GET");
         else

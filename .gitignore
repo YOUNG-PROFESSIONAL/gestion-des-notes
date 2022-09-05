@@ -1,6 +1,9 @@
 /frontend2/nbproject/private/
 /frontend2/build/
 /frontend2/dist/
+/frontend/lib
+/frontend/out
+
 /backend/node_modules
 /backend/.idea
 /backend/.vscode

@@ -4,6 +4,7 @@ import main.java.tp.eni.gsc.ui.headers.title.Title;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
@@ -70,7 +71,11 @@ public class EtudiantUI extends JPanel{
         table.getColumnModel().getColumn(1).setMaxWidth(150);
         table.getColumnModel().getColumn(2).setWidth(300);
         table.getColumnModel().getColumn(3).setMaxWidth(100);
-
+        /****** Center table cell *************/
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        table.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
+        /*************************************/
         // Hide table column four 04
         table.removeColumn(table.getColumnModel().getColumn(4));
         service = new EtudiantService();
@@ -167,7 +172,7 @@ public class EtudiantUI extends JPanel{
         searchPanel.add(fsearch,"h 25!, w 500!");
         searchPanel.add(searchBtn,"h 25!,w 100!");
 
-        filterPanel.setLayout(new MigLayout("fillx , debug","[]50[]","[]"));
+        filterPanel.setLayout(new MigLayout("fillx","[]190![]","[]"));
         filterPanel.add( niveauPanel,"w 200!");
         filterPanel.add(searchPanel,"w 800!");
         add(filterPanel,"fill, w 1000!");
@@ -196,13 +201,25 @@ public class EtudiantUI extends JPanel{
                 et.setPersonMatricule(fNum.getText());
                 et.setPersonName(fNom.getText());
                 et.setStudentLevel(String.valueOf(fNiveau.getSelectedIndex()));
-                System.out.println("ID : " + et.getPersonId() );
                 if (et.getPersonId().isEmpty()) {
                     try {
                         service.addStudent(et);
                         int count = model.getRowCount();
                         for(int x = 0; x< count ; x++) model.removeRow(0);
-                        initTableRow();
+
+                        int i = 1;
+                        try {
+                            for (Etudiant etudiant : service.getAllStudent("",niveauFilter.getSelectedIndex()))
+                                model.addRow(new Object[]{
+                                        i++,
+                                        etudiant.getPersonMatricule(),
+                                        etudiant.getPersonName(),
+                                        etudiant.getStudentLevel(),
+                                        etudiant.getPersonId()});
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
                         disableBtnOnInit();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -212,7 +229,20 @@ public class EtudiantUI extends JPanel{
                         service.updateStudent(et);
                         int count = model.getRowCount();
                         for(int x = 0; x< count ; x++) model.removeRow(0);
-                        initTableRow();
+
+                        int i = 1;
+                        try {
+                            for (Etudiant etudiant : service.getAllStudent("",niveauFilter.getSelectedIndex()))
+                                model.addRow(new Object[]{
+                                        i++,
+                                        etudiant.getPersonMatricule(),
+                                        etudiant.getPersonName(),
+                                        etudiant.getStudentLevel(),
+                                        etudiant.getPersonId()});
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
                         disableBtnOnInit();
                     }  catch (IOException ex) {
                         ex.printStackTrace();
@@ -232,7 +262,20 @@ public class EtudiantUI extends JPanel{
                         service.removeStudent(et);
                         int count = model.getRowCount();
                         for(int x = 0; x< count ; x++) model.removeRow(0);
-                        initTableRow();
+
+                        int i = 1;
+                        try {
+                            for (Etudiant etudiant : service.getAllStudent("",niveauFilter.getSelectedIndex()))
+                                model.addRow(new Object[]{
+                                        i++,
+                                        etudiant.getPersonMatricule(),
+                                        etudiant.getPersonName(),
+                                        etudiant.getStudentLevel(),
+                                        etudiant.getPersonId()});
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+
                         disableBtnOnInit();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -242,7 +285,7 @@ public class EtudiantUI extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 fNom.setText("");
-                fNiveau.setSelectedIndex(0);
+                fNiveau.setSelectedIndex(niveauFilter.getSelectedIndex());
             }
         });
         table.addMouseListener(new MouseAdapter() {

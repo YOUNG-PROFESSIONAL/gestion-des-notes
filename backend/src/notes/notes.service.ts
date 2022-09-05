@@ -51,7 +51,8 @@ class NotesService implements INotesService{
         return null as any;
     }
     async updateNotes(note:Notes): Promise<Notes> {
-     
+        let notes :Notes = await this.notesRepo.findOneBy({noteId:note.noteId}) || null as unknown as Notes;
+        notes.note = note.note;
         return await this.notesRepo.save(note);;
     }
     async suppNotes(id:string): Promise<boolean> {

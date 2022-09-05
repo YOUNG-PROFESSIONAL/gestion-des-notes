@@ -3,7 +3,7 @@ import { ClassementController } from './classement.controller';
 
 class RoutesClassement{
     public routes( app: Application) :void{
-        app.route('/classement')
+        app.route('/classement/:niv')
         .get(ClassementController.getClassement);
         app.route('/histogramme')
         .get(ClassementController.getStudents);

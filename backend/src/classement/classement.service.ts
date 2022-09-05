@@ -1,8 +1,8 @@
+import { dataSource } from './../config/dbconnect';
 import { Notes } from '../notes/notes.model';
-import { dataSource } from '../config/dbconnect';
 import { Student } from '../person/student/student.model';
 import { LEVEL } from '../person/student/level.enum';
-import { Like } from 'typeorm';
+import { createQueryBuilder, Like } from 'typeorm';
 import { Classement } from './classement.model';
 interface IClassementService{
     getStudents(level:LEVEL): Promise<Student[]> ;
@@ -25,31 +25,35 @@ class ClassementService implements IClassementService{
 
     async getClassement(level: any): Promise<Classement[]> {
 
-        const classements: Classement[] = [];
-        const classement : Classement = {
-            bNotes:[] as Notes[]
-         } as Classement;
-        
-        let notes: Notes[] ;
+        const classements : Classement[] = [];
 
-        notes = await this.repoNotes.find({
+        const students:Student[] = await this.repoStudent.find({
             where:{
-                noteStudent:{studentLevel:level.level} 
-            },
-            relations:{
-                noteStudent:true,
-                noteMatiere:true
+                studentLevel: level
             }
-        }) as any
-         
-         notes.forEach((note)=>{
-            classement.bAverage = classement.bAverage + note.note*note.noteMatiere.matiereCoeff;
+        })
+        for(var student of students){
+            const classement : Classement = {} as Classement;
+            classement.bCoefficient = 0;
+            classement.bAverage = 0;
+            const notes : Notes[] = await this.repoNotes.find({
+                where:{noteStudent:{personId:student.personId}},
+                relations:{noteMatiere:true}
+            })
+           classement.bStudent = student;
+           classement.bNotes = notes;
+           notes.forEach(note => {
             classement.bCoefficient = classement.bCoefficient + note.noteMatiere.matiereCoeff;
-         })
-         console.log(notes)
-         classement.bAverage = classement.bAverage/classement.bCoefficient;
+            classement.bAverage = classement.bAverage + note.note * note.noteMatiere.matiereCoeff;
+           })
+           classement.bAverage = classement.bAverage/classement.bCoefficient
+
+           classements.push(classement);
+            console.log(classement);
+        }
+        console.log(classements);
         
-        return classements.sort((student)=> student.bAverage) as any;
+        return classements.sort((a,b)=>(a.bAverage>b.bAverage?-1:1));
     }
 }
 export default new ClassementService();

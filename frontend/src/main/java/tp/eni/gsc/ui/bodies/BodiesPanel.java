@@ -1,16 +1,19 @@
 package main.java.tp.eni.gsc.ui.bodies;
 
+import main.java.tp.eni.gsc.ui.bodies.contents.dashboard.DashboardUI;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.io.IOException;
 
 public class BodiesPanel extends JPanel {
 
-    public BodiesPanel(){
+    public BodiesPanel() throws IOException {
 
         initUI();
     }
-    private void initUI(){
+    private void initUI() throws IOException {
         /***************Init Panel************/
         /**************Set Layout*********/
         /********* Set this **********/
@@ -20,7 +23,8 @@ public class BodiesPanel extends JPanel {
         setOpaque(false);
         setLayout(new BorderLayout());
         setBorder(new EmptyBorder(10, 20, 10, 20));
-
+        setMaximumSize(new Dimension(1190,500));
+            showForm(new DashboardUI());
     }
     public void showForm(JComponent form) {
         removeAll();
