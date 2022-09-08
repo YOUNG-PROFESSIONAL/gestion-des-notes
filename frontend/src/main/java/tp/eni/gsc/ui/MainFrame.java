@@ -51,7 +51,8 @@ public class MainFrame extends JFrame {
         createLayout(mainPanel);
         /********* Set this **********/
         setSize(new Dimension(1920,1080));
-        setBackground(new Color(0xFFFFFF));
+        /********* Set this **********/
+        setBackground(new Color(0x27A0FF));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         btnDashboard.setEnabled(false);
     }

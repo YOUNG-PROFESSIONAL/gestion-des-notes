@@ -126,7 +126,7 @@ public class EtudiantUI extends JPanel{
         fId.setText(""); // Set Id empty
         fNom.setText("");// Set nom field empty
         fNum.setText("");// Set nom field empty
-        fNiveau.setSelectedIndex(0); // Set Default niveau select
+        //fNiveau.setSelectedIndex(0); // Set Default niveau select
     }
     private  void disableBtnOnAdd(){
         fNom.setEnabled(true);
@@ -201,6 +201,7 @@ public class EtudiantUI extends JPanel{
                 et.setPersonMatricule(fNum.getText());
                 et.setPersonName(fNom.getText());
                 et.setStudentLevel(String.valueOf(fNiveau.getSelectedIndex()));
+                fNiveau.setSelectedIndex(fNiveau.getSelectedIndex());
                 if (et.getPersonId().isEmpty()) {
                     try {
                         service.addStudent(et);

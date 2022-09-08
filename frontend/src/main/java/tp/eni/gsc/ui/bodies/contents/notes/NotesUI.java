@@ -120,6 +120,7 @@ public class NotesUI extends JPanel{
                 Notes notes = new Notes();
                 notes.setNoteId(id.getText());
                 notes.setNote(Double.parseDouble(fNote.getText()));
+
                 try {
                     service.updateNotes(notes);
                     saveBtn.setEnabled(false);
@@ -127,6 +128,7 @@ public class NotesUI extends JPanel{
                     int count = model.getRowCount();
                     for(int x = 0; x< count ; x++) model.removeRow(0);
                     int i = 1;
+                    defaultMatiereId  = tableMatiere.getModel().getValueAt(tableMatiere.getSelectedRow(),1).toString();
                     for (Notes note: service.getAllNotes(niv,defaultMatiereId)) {
                         model.addRow(new Object[]{
                                 i++,
